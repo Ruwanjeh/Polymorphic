@@ -1,0 +1,32 @@
+# Base class: Animal
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def move(self):
+        pass  # This will be overridden by subclasses
+
+
+# Subclass 1: Dog (inherits from Animal)
+class Dog(Animal):
+    def move(self):
+        print(f"{self.name} is running on four legs 🐕🏃‍♂️")
+
+
+# Subclass 2: Fish (inherits from Animal)
+class Fish(Animal):
+    def move(self):
+        print(f"{self.name} is swimming in the water 🐟💦")
+
+
+# Subclass 3: Bird (inherits from Animal)
+class Bird(Animal):
+    def move(self):
+        print(f"{self.name} is flying in the sky 🦅🌤️")
+
+
+# Testing the animals
+animals = [Dog("Buddy"), Fish("Nemo"), Bird("Sky")]
+
+for animal in animals:
+    animal.move()
